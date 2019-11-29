@@ -1,0 +1,36 @@
+Pillars:
+--
+Scaling by constraint.  Cost/upgrade/return in terms of playtime.
+Looping.  Once equipments are maxed, get a new one.  Once characters are maxed, ascend.
+Cross-interaction.  Equipment have tags which scaffold off each other.
+
+Equipment
+[tags] (berserkers, sneaky)
+[upgrades] (attackTime, critChance)
+[actions] (generate xp, generate mana, generate fury)
+
+character
+[Slots - equipment]
+[Spells]
+
+Things with Cost
+
+
+xp / s function
+
+stat type = mult weight and flat weight
+
+base * mult * (crit chance * crit Mult) * speed * echo? *
+
+Dagger
+--
+
+
+
+set of characters
+each character has allowed slots
+each slot can be populated with equipment
+each equipment has multiple upgrades (and the potential to add additional upgrades)
+each equipment can have bars to progress
+
+asdf

@@ -1,9 +1,9 @@
 ﻿using Unity.Entities;
 
-namespace IdleECS
+namespace RotateCube
 {
-    public struct Rotate
+    public struct Rotate : IComponentData
     {
-        public float RadiansPerSecond;
+        public float radiansPerSecond;
     }
 }

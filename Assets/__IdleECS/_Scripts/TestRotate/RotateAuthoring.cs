@@ -1,11 +1,19 @@
 using System;
+using UnityEngine;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Transforms;
 
-namespace IdleECS
+namespace RotateCube
 {
-    public class RotateAuthoring : Monobehaviour, IConvertGameObjectToEntity
+    public class RotateAuthoring : MonoBehaviour, IConvertGameObjectToEntity
     {
-        
+        [SerializeField] private float degreesPerSecond;
+
+        public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+        {
+            dstManager.AddComponentData(entity, new Rotate { radiansPerSecond = math.radians(degreesPerSecond)});
+            dstManager.AddComponentData(entity, new RotationEulerXYZ());
+        }
     }
 }
