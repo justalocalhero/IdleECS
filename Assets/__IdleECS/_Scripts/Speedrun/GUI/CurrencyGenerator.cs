@@ -7,9 +7,11 @@ namespace SpeedrunIdle
 {
     public class CurrencyGenerator : MonoBehaviour
     {
+        public string generatorName;
+        public int level;
         public CurrencyManager currencyManager;
         public Currency currency;
-        public TextMeshProUGUI GeneratorName;
+        public TextMeshProUGUI generatorNameMesh;
         public ProgressBar progressBar;
         private float defaultFireTime = 2;
         private int defaultValue = 5;
@@ -22,6 +24,7 @@ namespace SpeedrunIdle
         void Start()
         {
             progressBar.SetFireTime(defaultFireTime);
+            generatorNameMesh.SetText(generatorName);
         }
 
         void HandleFire()
